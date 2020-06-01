@@ -1,3 +1,23 @@
 <section class="home-container">
-  home works!
+  <formica-element-cards-list>
+    <formica-card-flip class="form-element no-bg">
+      <formica-element-card *formicaFrontSide formicaFlipTo="back">
+        <div class="centered accent">
+          <h2 class="title">+</h2>
+          <p class="cta">Aggiungi un nuovo form</p>
+        </div>
+      </formica-element-card>
+      <formica-element-card *formicaBackSide>
+        <div class="centered">
+          <formica-quick-creation-element (left)="noChanges()" (submitted)="add($event)"></formica-quick-creation-element>
+        </div>
+      </formica-element-card>
+    </formica-card-flip>
+    <ng-container *ngFor="let form of forms">
+      <formica-element-card class="form-element">
+        <h2 class="title">{{form.name}}</h2>
+        <p class="description">{{form.description}}</p>
+      </formica-element-card>
+    </ng-container>
+  </formica-element-cards-list>
 </section>

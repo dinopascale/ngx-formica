@@ -4,3 +4,34 @@
   max-width: 960px
   margin: 0 auto
   height: 100%
+
+  .form-element
+    transition: flex 0.15s ease-in-out
+    flex: 0 1 28%
+    min-width: 28%
+    background: $snowWhite
+    border-radius: 8px
+    margin: 16px 2%
+    &.no-bg
+      background: transparent
+    .title
+      font-size: 1.2em
+      margin-bottom: 4px
+    .description
+      font-size: 0.8em
+      color: $lightBlack
+    .cta
+      font-size: 0.8em
+      font-weight: bold
+      text-transform: uppercase
+    .centered
+      display: flex
+      flex-flow: row wrap
+      height: 100%
+      text-align: center
+      align-content: center
+      cursor: pointer
+      &.accent
+        color: $accent
+      & > *
+        flex: 1 0 100%

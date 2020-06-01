@@ -1,0 +1,7 @@
+<form [formGroup]="createElementForm" (ngSubmit)="handleSubmit()">
+  <input type="text" placeholder="Nome Form" formControlName="name">
+  <div class="action">
+    <button class="leave" type="button" (click)="handleLeave()">Annulla</button>
+    <button class="submit" type="submit">Crea</button>
+  </div>
+</form>
