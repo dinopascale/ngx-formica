@@ -1,0 +1,30 @@
+/* ML NORMALIZZO ICONE x Mobile: definisco in modo proporzionale l'ingombro per sfondo (.icon) e dell'elemento grafico interno (.iconpadd:before) */
+.iconfull,
+.iconpadd
+  position: relative
+  display: inline-block
+  height: 1em
+  width: 1em
+  line-height: 1em
+  text-align: center
+/* font-size:50px /* NOTA font-size determina l'ingombro dell'icona, compreso lo sfondo (non serve modificare height, width, line-eight, ecc) */
+/* puoi defiirlo direttamente nella customizzaizone del layout */
+
+/* icona occupa tutto il background */
+.iconfull:before
+  display: block
+  position: absolute
+  font-size: 1em
+  top: 0
+  left: 0
+  line-height: unset !important
+
+/* icona con spazio rispetto al background */
+.iconpadd:before
+  display: block
+  position: absolute
+  //font-size:0.55em top:0.4090909090909091em left:0.4090909090909091em
+  font-size: 0.8em
+  top: 0.125em
+  left: 0.125em
+/* se FS = font-size di :before, TL (valore top/left di :before) = (1-FS)/(2*FS) */
