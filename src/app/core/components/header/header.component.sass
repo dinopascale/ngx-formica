@@ -1,0 +1,45 @@
+@import '../../../../styles/commons/index'
+
+.formica-header
+  display: flex
+  padding: 0 16px
+  justify-content: flex-start
+  border-bottom: 1px solid $lightGrey
+  background-color: $snowWhite
+  .logo
+    flex: 0 1 auto
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    img
+      max-width: 36px
+      margin-right: 8px
+  .navigation
+    flex: 3 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    .list
+      display: flex
+      height: 100%
+      align-items: center
+      .nav-element
+        cursor: pointer
+        height: 100%
+        padding: 16px 28px
+        margin: 0 12px
+        display: flex
+        align-items: center
+        position: relative
+        &.active-link
+          font-weight: bold
+          &:after
+            position: absolute
+            bottom: -2px
+            left: 0
+            width: 100%
+            content: ''
+            height: 3px
+            background-color: $accent
+            border-radius: 2px 2px 0 0
+
