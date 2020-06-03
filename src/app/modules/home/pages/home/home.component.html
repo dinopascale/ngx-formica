@@ -14,7 +14,7 @@
       </formica-element-card>
     </formica-card-flip>
     <ng-container *ngFor="let form of forms">
-      <formica-element-card class="form-element">
+      <formica-element-card class="form-element no-flip" (click)="editForm(form.id)">
         <h2 class="title">{{form.name}}</h2>
         <p class="description">{{form.description}}</p>
       </formica-element-card>

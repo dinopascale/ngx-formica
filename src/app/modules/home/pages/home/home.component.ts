@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {CardFlipComponent} from '../../../../shared/card-flip/card-flip.component';
+import {Router} from '@angular/router';
 
 const mockData = [
   {id: 1, name: 'Form #1', description: "descripting form #1 with some text"},
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   forms: {id: number, name: string, description: string}[] = mockData;
   @ViewChild(CardFlipComponent, {static: true}) cardFlip: CardFlipComponent;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -27,11 +28,15 @@ export class HomeComponent implements OnInit {
 
   add(infoForm): void {
     this.cardFlip.flipToFront();
-    this.forms = [infoForm, ...this.forms]
+    this.forms = [{...infoForm, id: this.forms.length + 1}, ...this.forms]
   }
 
   noChanges(): void {
     this.cardFlip.flipToFront();
+  }
+
+  editForm(id): void {
+    this.router.navigate(['edit-form', id])
   }
 
 }

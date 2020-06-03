@@ -1,4 +1,4 @@
-@import "src/styles/commons/index"
+@import "src/styles/commons/color"
 
 .card-element
   height: 208px
@@ -6,4 +6,20 @@
   display: flex
   flex-flow: column
   padding: 20px
-
+  cursor: pointer
+  .content
+    flex: 2 0 auto
+  .row-action
+    flex: 0 1 auto
+    display: flex
+    justify-content: space-between
+    .delete, .edit
+      background: transparent
+      font-size: .7em
+      padding: 8px 12px
+      border-radius: 8px
+      cursor: pointer
+      &:hover
+        background: $lightGrey
+    .edit
+      color: $accent

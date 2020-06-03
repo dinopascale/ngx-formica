@@ -11,7 +11,8 @@ export class ElementCardComponent implements OnInit {
   @Input() cardName: string;
   @Input() cardDescription: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

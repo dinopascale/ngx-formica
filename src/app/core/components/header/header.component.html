@@ -1,11 +1,11 @@
 <header class="formica-header">
-  <div class="logo">
+  <div class="logo" routerLink="/">
     <img src="assets/logo.png" alt="logo formica">
     <span>Formica</span>
   </div>
   <div class="navigation">
     <ul class="list">
-      <li class="nav-element" routerLink="/" routerLinkActive="active-link">Forms</li>
+      <li class="nav-element" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Forms</li>
       <li class="nav-element">Inputs</li>
     </ul>
   </div>
